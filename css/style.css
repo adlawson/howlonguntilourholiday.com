@@ -1,0 +1,119 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 100%;
+  /* 16px */
+  line-height: 24px;
+  line-height: 1.71429rem;
+  color: #444444;
+  background-color: whitesmoke;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  border: 20px solid #fff; }
+
+body {
+  font-size: 16px;
+  font-size: 1.14286rem;
+  margin: 50px auto;
+  max-width: 670px;
+  text-align: center; }
+
+h1 {
+  font-size: 48px;
+  font-size: 3.42857rem;
+  line-height: 48px;
+  line-height: 3.42857rem;
+  font-weight: bold; }
+
+p, ul, h1 {
+  margin-bottom: 24px; }
+
+time, b {
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: #444444; }
+  a:hover, a:focus {
+    text-decoration: none;
+    color: #16a6b6; }
+
+.clearfix {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    zoom: 1;
+    display: table;
+    content: ''; }
+  .clearfix:after {
+    clear: both; }
+
+.countdown {
+  margin: 40px 0 48px; }
+  .countdown li {
+    float: left;
+    padding: 24px;
+    margin-right: 24px;
+    background-color: #444444;
+    color: whitesmoke;
+    width: 100px;
+    border-radius: 10px; }
+    .countdown li:last-child {
+      margin: 0; }
+    .countdown li .value, .countdown li .label {
+      display: block; }
+    .countdown li .value {
+      font-size: 58px;
+      font-size: 4.14286rem;
+      font-weight: bold; }
+    .countdown li .label {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-size: 1rem; }
+
+@media only screen and (max-width: 480px) {
+  .countdown li {
+    float: none;
+    margin: 0 auto 24px; }
+    .countdown li:last-child {
+      margin: 0 auto; } }

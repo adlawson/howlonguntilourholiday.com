@@ -1,0 +1,47 @@
+// Countdown
+
+.countdown {
+	margin: 40px 0 48px;
+
+	li {
+		float: left;
+		padding: $spacing;
+		margin-right: $spacing;
+		background-color: $grey;
+		color: $light-grey;
+		width: 100px;
+		border-radius:10px;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		.value, .label {
+			display: block;
+		}
+
+		.value {
+			@include rem(font-size,58px);
+			font-weight: bold;
+		}
+
+		.label {
+			text-transform: uppercase;
+			@include rem(font-size,14px);
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	.countdown {
+		li {
+			float: none;
+			margin: 0 auto $spacing;
+
+			&:last-child {
+				margin: 0 auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+//Typography
+
+h1 {
+	@include rem(font-size,$heading-primary-font-size);
+	@include rem(line-height,$heading-primary-line-height);
+	font-weight: bold;
+}
+
+p, ul, h1 {
+	margin-bottom: $spacing;
+}
+
+time, b {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	color: $grey;
+
+	&:hover, &:focus {
+		text-decoration: none;
+		color: $turquoise;
+	}
+}

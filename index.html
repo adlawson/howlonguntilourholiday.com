@@ -3,44 +3,39 @@
     <title>How long until our holiday? &ndash; Andrew Lawson &amp; Sam Hicks</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
-    <link rel="stylesheet" type="text/css" href="style/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
 
-    <div>
+     <p>
+        Flight departs
+        <time datetime="2012-12-22T08:55" data-date>Saturday 22<sup>nd</sup> December</time>
+    </p>
 
-        <h1>How long until our holiday?</h1>
-        <h2>Andrew Lawson &amp; Sam Hicks</h2>
+    <h1>Holidays are coming!</h1>
 
-        <div>
-            <div data-countdown="days">
-                <span data-value>0</span>
-                <span data-label='["Day", "Days"]'>Days</span>
-            </div>
-            <div data-countdown="hours">
-                <span data-value>0</span>
-                <span data-label='["Hour", "Hours"]'>Hours</span>
-            </div>
-            <div data-countdown="minutes">
-                <span data-value>0</span>
-                <span data-label='["Minute", "Minutes"]'>Minutes</span>
-            </div>
-            <div data-countdown="seconds">
-                <span data-value>0</span>
-                <span data-label='["Second", "Seconds"]'>Seconds</span>
-            </div>
-        </div>
+    <ul class="countdown clearfix">
+        <li data-countdown="days">
+            <span class="value" data-value>0</span>
+            <span class="label" data-label='["Day", "Days"]'>Days</span>
+        </li>
+        <li data-countdown="hours">
+            <span class="value" data-value>0</span>
+            <span class="label" data-label='["Hour", "Hours"]'>Hours</span>
+        </li>
+        <li data-countdown="minutes">
+            <span class="value" data-value>0</span>
+            <span class="label" data-label='["Minute", "Minutes"]'>Minutes</span>
+        </li>
+        <li data-countdown="seconds">
+            <span class="value" data-value>0</span>
+            <span class="label" data-label='["Second", "Seconds"]'>Seconds</span>
+        </li>
+    </ul>
 
-        <p>
-            Until we go on holiday on
-            <time datetime="2012-12-22T08:55" data-date>Saturday 22<sup>nd</sup> December, 2012</time>
-        </p>
-
-    </div>
-
-    <div>
-        <a href="https://github.com/adlawson/howlonguntilourholiday.com">View the source on github</a>
-    </div>
+    <p>
+        <a href="https://github.com/adlawson/howlonguntilourholiday.com">View the source on <b>github</b></a>
+    </p>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="script/main.min.js"></script>
