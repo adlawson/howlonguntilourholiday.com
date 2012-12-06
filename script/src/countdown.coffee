@@ -3,9 +3,7 @@
 
 # Valid types
 types =
-  years: (date) -> date.getFullYear() - 1970
-  months: (date) -> date.getMonth()
-  days: (date) -> date.getDate() - 1
+  days: (date) -> Math.floor date / 86400000
   hours: (date) -> date.getHours()
   minutes: (date) -> date.getMinutes()
   seconds: (date) -> date.getSeconds()
@@ -54,7 +52,6 @@ class Countdown
 # @param [Date] date
 countdown = (date) ->
   controls = []
-
   @each ->
     element = jQuery @
     type = element.data 'countdown'
