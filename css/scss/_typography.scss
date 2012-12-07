@@ -23,6 +23,10 @@ p, ul, h1 {
 	margin-bottom: $spacing;
 }
 
+p {
+	letter-spacing: 1px;
+}
+
 b, time {
 	font-weight: bold;
 }
