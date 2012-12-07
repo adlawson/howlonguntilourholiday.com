@@ -1,7 +1,34 @@
 'use strict'
 
 
-# Valid types
+# Countdown creator
+#
+# @param [Date] date
+countdown = (date) ->
+  controls = []
+  @each ->
+    element = jQuery @
+    type = element.data 'countdown'
+    controls.push new CountdownType element, type
+  notify controls, date
+
+
+# Notify the controls of an update
+#
+# @param [Array] controls
+# @param [Date] date
+notify = (controls, date) ->
+  now = new Date()
+  diff = date - now
+  diff = null if diff < 0
+  diff = new Date diff
+  for control in controls
+    control.onUpdate diff
+  setTimeout =>
+    notify controls, date
+  , 30
+
+
 types =
   days: (date) -> Math.floor date / 86400000
   hours: (date) -> date.getHours()
@@ -10,15 +37,14 @@ types =
   milliseconds: (date) -> date.getMilliseconds()
 
 
-# Countdown control
-class Countdown
+class CountdownType
 
   # @param [jQuery] element
   # @param [String] type
-  constructor: (@element, @type) ->
+  constructor: (element, @type) ->
     throw new Error "Invalid countdown type \"#{@type}\"" unless types[@type]?
-    @label  = @element.find '[data-label]'
-    @value  = @element.find '[data-value]'
+    @label  = element.find '[data-label]'
+    @value  = element.find '[data-value]'
     @labels = @label.data 'label'
 
   # On update
@@ -45,37 +71,6 @@ class Countdown
   # @param [Number] value
   updateValue: (value) =>
     @value.text value
-
-
-# Countdown creator
-#
-# @param [Date] date
-countdown = (date) ->
-  controls = []
-  @each ->
-    element = jQuery @
-    type = element.data 'countdown'
-    controls.push new Countdown element, type
-
-  interval = 36
-  notify controls, date, interval
-  setInterval =>
-    notify controls, date, interval
-  , interval
-
-
-# Notify the controls of an update
-#
-# @param [Array] controls
-# @param [Date] date
-# @param [Number] interval
-notify = (controls, date, interval) ->
-  now = new Date()
-  diff = date - now
-  diff = null if diff < 0
-  diff = new Date diff
-  for control in controls
-    control.onUpdate diff
 
 
 # Exports
