@@ -7,10 +7,10 @@
 		float: left;
 		padding: $spacing;
 		margin-right: $spacing;
-		background-color: $grey;
-		color: $light-grey;
+		background-color: $white;
+		color: $dark-blue;
 		width: 100px;
-		border-radius:10px;
+		border-radius: 10px;
 
 		&:last-child {
 			margin: 0;
@@ -28,11 +28,18 @@
 		.label {
 			text-transform: uppercase;
 			@include rem(font-size,14px);
+			letter-spacing: 1px;
+			font-family: $heading-font;
 		}
 	}
 }
 
 @media only screen and (max-width: 480px) {
+
+	time {
+		display: block;
+		margin-bottom: 6px;
+	}
 
 	.countdown {
 		li {
