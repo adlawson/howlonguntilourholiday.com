@@ -126,7 +126,7 @@ a {
 @media only screen and (max-width: 480px) {
   time {
     display: block;
-    margin-bottom: 6px; }
+    margin-top: 6px; }
 
   .countdown li {
     float: none;
